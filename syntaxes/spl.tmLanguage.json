@@ -281,7 +281,7 @@
 			]
 		},
 		"spl_function_call": {
-			"begin": "(?x)\n(?!(?:while|if|else|return)\\s*\\()\n(\n(?:[A-Za-z_][A-Za-z0-9_]*+)++  # actual name\n)\n\\s*(\\()",
+			"begin": "(?!(?:while|if|else|return)\\s*\\()(?=(?:[A-Za-z_][A-Za-z0-9_]*+)++\\s*\\()",
 			"end": "(?<=\\))(?!\\w)",
 			"name": "meta.function-call.spl",
 			"patterns": [
