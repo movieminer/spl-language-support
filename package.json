@@ -4,7 +4,7 @@
   "description": "language support for SPL",
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.78.0"
+    "vscode": "^1.0.0"
   },
   "author": {
       "name": "movieminer"
