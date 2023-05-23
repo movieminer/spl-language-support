@@ -86,10 +86,10 @@
 			},
 			"patterns": [
 				{
-					"include": "#parameter"
+					"include": "#storage_types"
 				},
 				{
-					"include": "#storage_types"
+					"include": "#parameter"
 				},
 				{
 					"include": "#function_arrow"
