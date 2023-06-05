@@ -93,8 +93,9 @@
 		"fun_type": {
 			"name": "meta.function.type.type.spl",
 			"patterns": [
+				
 				{
-					"include": "$self"
+					"include": "#parens_type"
 				},
 				{
 					"include": "#storage_types"
@@ -107,6 +108,32 @@
 				},
 				{
 					"include": "#brackets_type"
+				},
+				{
+					"include": "$self"
+				}
+			]
+		},
+		"parens_type": {
+			"name": "meta.parens.type.spl",
+			"begin": "\\(",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.section.parens.begin.bracket.round.spl"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.section.parens.end.bracket.round.spl"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#fun_type"
+				},
+				{
+					"include": "$self"
 				}
 			]
 		},
