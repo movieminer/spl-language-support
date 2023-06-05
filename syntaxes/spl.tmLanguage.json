@@ -86,10 +86,21 @@
 			},
 			"patterns": [
 				{
+					"include": "#fun_type"
+				}
+			]
+		},
+		"fun_type": {
+			"name": "meta.function.type.type.spl",
+			"patterns": [
+				{
+					"include": "$self"
+				},
+				{
 					"include": "#storage_types"
 				},
 				{
-					"include": "#parameter"
+					"include": "#parametertype"
 				},
 				{
 					"include": "#function_arrow"
@@ -938,6 +949,14 @@
 		},
 		"parameter": {
 			"match": "([a-zA-Z_]\\w*)\\s*(?=(?:,|\\)|\\]))",
+			"captures": {
+				"1": {
+					"name": "variable.parameter.spl"
+				}
+			}
+		},
+		"parametertype": {
+			"match": "([a-zA-Z_]\\w*)\\s*",
 			"captures": {
 				"1": {
 					"name": "variable.parameter.spl"
